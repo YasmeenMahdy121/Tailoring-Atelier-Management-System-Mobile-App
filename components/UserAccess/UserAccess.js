@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from '@expo/vector-icons/AntDesign';
 import Home from '../Home/Home'
+import ModelDetails from '../ModelDetails/ModelDetails'
 import Profile from '../Profile/Profile'
 import { auth, firestore } from '../../firebase';
 
@@ -51,9 +52,17 @@ export default function UserAccess({navigation}) {
           />
       </View>
       <Stack.Navigator>
+        
         <Stack.Screen 
         name="Home" 
         component={Home} 
+        options={{
+        headerShown: false
+        }}
+        />
+        <Stack.Screen 
+        name="ModelDetails" 
+        component={ModelDetails} 
         options={{
         headerShown: false
         }}
@@ -65,6 +74,7 @@ export default function UserAccess({navigation}) {
         headerShown: false
         }}
         />
+ 
       </Stack.Navigator>
     </View>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Text,View,Image, ScrollView} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { auth } from './firebase';
@@ -14,6 +15,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   
   return (
+    <ScrollView>
     <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen 
@@ -44,8 +46,11 @@ export default function App() {
       headerShown: false
       }}
       />
+      
+      
     </Stack.Navigator>
     </NavigationContainer>
+    </ScrollView>
   );
 }
 

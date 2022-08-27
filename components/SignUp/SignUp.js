@@ -34,7 +34,7 @@ export default function SignUp({navigation}) {
                  }}
                 >مستر تايلور</Text>
                 <Image source ={require('../../assets/registration.jpg')}
-                    style={{width:"100%",height:"30%",marginTop:20}}
+                    style={{width:"100%",height:200,marginTop:20}}
                 />
 
                 <Formik
